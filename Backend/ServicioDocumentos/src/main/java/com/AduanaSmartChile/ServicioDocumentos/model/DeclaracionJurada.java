@@ -2,6 +2,7 @@ package com.AduanaSmartChile.ServicioDocumentos.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.mapping.Set;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "Declaracion_Jurada")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class DeclaracionJurada {
 
     @Id
