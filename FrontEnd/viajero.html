@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Zona viajero</title>
+    <link rel="stylesheet" href="styles/viajero.css">
+</head>
+<body>
+    <a href="index.html">
+        <button>Volver al inicio</button>
+    </a>
+
+    <button onclick="mostrarFormulario()">Declarar productos</button>
+
+    <div id="formulario" style="display:none; margin-top:20px;">
+        <form id="declaracionForm">
+            <div id="productos">
+                <div class="producto">
+                    <label>Producto a declarar:</label>
+                    <input type="text" name="producto[]" required>
+                    <label>Cantidad:</label>
+                    <input type="number" name="cantidad[]" min="1" required>
+                    <label>Descripción:</label>
+                    <textarea name="descripcion[]" rows="2"></textarea>
+                    <button type="button" onclick="eliminarProducto(this)">Eliminar</button>
+                    <hr>
+
+                </div>
+            </div>
+            <button type="button" onclick="agregarProducto()">Agregar producto</button>
+            <button type="submit">Enviar declaración</button>
+        </form>
+    </div>
+
+    <script src="scripts/viajero.js"></script>
+</body>
+</html>
